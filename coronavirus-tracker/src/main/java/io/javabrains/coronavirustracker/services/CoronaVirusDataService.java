@@ -30,7 +30,7 @@ public class CoronaVirusDataService {
 
 
 	@PostConstruct
-	@Scheduled(cron = "* * 6 * * *")
+	@Scheduled(cron = "0 0 6 * * ?")
 	public void fetchFreshData() throws IOException {
 		List<ReportRepo> newStats = new ArrayList<>();
 		URL url;
